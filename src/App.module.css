@@ -1,0 +1,29 @@
+.overlay {
+  backdrop-filter: blur(6px);
+}
+
+.modalRoot {
+  border: 1px solid #e5e7eb;
+}
+
+.content {
+  padding: 24px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
