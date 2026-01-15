@@ -3,8 +3,21 @@ import styles from './App.module.css';
 import Button from './button/Button';
 import Modal from './modal/Modal';
 
+type Country = {
+  id: number;
+  name: string;
+  dialCode: string;
+  flag: string;
+};
+
 function App() {
   const [open, setOpen] = useState<boolean>(false);
+
+  const countries: Country[] = [
+    { id: 1, name: 'India', dialCode: '+91', flag: '/flags/in.svg' },
+    { id: 2, name: 'USA', dialCode: '+1', flag: '/flags/us.svg' },
+  ];
+  const [selectedCountries, setSelectedCountries] = useState<Country[]>([]);
   return (
     <>
       <Button onClick={() => setOpen(true)} text="open Modals" />
