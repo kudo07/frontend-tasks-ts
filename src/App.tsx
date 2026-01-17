@@ -2,6 +2,7 @@ import { useState } from 'react';
 import styles from './App.module.css';
 import Button from './button/Button';
 import Modal from './modal/Modal';
+import MultiSelectDropdown from './searchableMultiSelect/MultiSelectDropdown';
 
 type Country = {
   id: number;
@@ -56,6 +57,19 @@ function App() {
           </div>
         </form>
       </Modal>
+
+      <MultiSelectDropdown<Country>
+        id="countries"
+        label="Select Countries"
+        options={countries}
+        value={selectedCountries}
+        onChange={setSelectedCountries}
+        labelKey="name"
+        valueKey="id"
+        showIcon
+        iconKey="flag"
+        placeholder="Chose countries"
+      />
     </>
   );
 }
